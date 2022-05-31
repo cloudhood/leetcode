@@ -1,3 +1,4 @@
+-- https://leetcode.com/problems/count-student-number-in-departments/
 SELECT 
     d.dept_name,
     COALESCE(COUNT(DISTINCT s.student_id), 0) student_number
