@@ -3,7 +3,7 @@ WITH Slams AS (
     SELECT 
         year,
         Wimbledon player_id,
-        "Wimbledon" slam 
+        "GB" slam 
     FROM 
         Championships
     UNION ALL
