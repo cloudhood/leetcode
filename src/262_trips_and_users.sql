@@ -3,13 +3,13 @@
 -- Need two joins, can't just do one join with OR.
 WITH unbanned AS (
     SELECT 
-	    users_id
+	users_id
     FROM 
-	    Users
+	Users
     WHERE 
-	    banned = "No"
+	banned = "No"
     AND 
-	    role <> "partner"
+	role <> "partner"
 )
 SELECT 
     request_at "Day",
