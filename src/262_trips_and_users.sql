@@ -1,4 +1,6 @@
 -- https://leetcode.com/problems/trips-and-users/
+--
+-- Need two joins, can't just do one join with OR.
 WITH unbanned AS (
     SELECT 
 		users_id
