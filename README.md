@@ -1,2 +1,2 @@
 # Leetcode
-Solutions to database problems on Leetcode. Updated daily.
+Solutions to (mainly) database problems on Leetcode. Updated daily.
