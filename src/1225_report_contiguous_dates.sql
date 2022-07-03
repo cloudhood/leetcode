@@ -3,20 +3,23 @@
 -- The key insight is to identify consecutive dates per state using a derived ROW_NUMBER variable.
 -- When difference between n1 and n2 changes, we have a new run.
 --
+-- fails
 -- period_date	period_state	n1		
 -- 28/12/2018	fail	        1		
 -- 29/12/2018	fail	        2		
 -- 04/01/2019	fail	        3   		
 -- 05/01/2019	fail	        4		
-				
+--			
+-- successes
 -- period_date	period_state	n1		
--- 30/12/2018	success 	    1		
--- 31/12/2018	success 	    2		
+-- 30/12/2018	success	        1		
+-- 31/12/2018	success	        2		
 -- 01/01/2019	success	        3		
--- 02/01/2019	success 	    4		
+-- 02/01/2019	success	        4		
 -- 03/01/2019	success	        5		
 -- 06/03/2019	success	        6		
 				
+-- combined
 -- period_date	period_state	n1	n2	n2 - n1
 -- 28/12/2018	fail	        1	1	0
 -- 29/12/2018	fail	        2	2	0
